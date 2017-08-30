@@ -1,3 +1,6 @@
+let state = {count: 0}
+let action = {type: 'INCREASE_COUNT'}
+
 function changeState(state, action){
   switch (action.type) {
     case 'INCREASE_COUNT':
@@ -7,7 +10,12 @@ function changeState(state, action){
   }
 }
 
-let state = {count: 0}
-let action = {type: 'INCREASE_COUNT'}
+function render(){
+  document.setInnerHTML = state.counter
+}
 
-changeState(state, action)
+function dispatch(action){
+  state = changeState(state, action)
+  render()
+}
+
