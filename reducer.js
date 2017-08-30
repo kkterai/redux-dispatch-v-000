@@ -7,7 +7,19 @@ function changeState(state, action){
   }
 }
 
+function render(){
+	document.setInnerHTML = state.count
+}
+
+function dispatch(action){
+	state = changeState(state, action)
+	render()
+}
+
+dispatch({type: 'INCREASE_COUNT'})
+
 let state = {count: 0}
 let action = {type: 'INCREASE_COUNT'}
+
 
 changeState(state, action)
