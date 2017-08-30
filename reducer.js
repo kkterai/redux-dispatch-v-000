@@ -11,7 +11,7 @@ function changeState(state, action){
 }
 
 function render(){
-  document.setInnerHTML = state.counter
+  document.innerHTML = state.count
 }
 
 function dispatch(action){

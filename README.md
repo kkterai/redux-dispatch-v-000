@@ -93,7 +93,7 @@ Now, how would we display something like this on a page?  And how would we make 
 
 ```javascript
 function render(){
-	document.setInnerHTML = state.count
+	document.innerHTML = state.count
 }
 ```
 
@@ -116,7 +116,7 @@ function dispatch(action){
 }
 
 function render(){
-	document.setInnerHTML = state.count
+	document.innerHTML = state.count
 }
 
 // call the render function
@@ -128,7 +128,7 @@ And presto! Our number is displayed on the page.  However, we want to call `rend
 
 ```javascript
 function render(){
-	document.setInnerHTML = state.count
+	document.innerHTML = state.count
 }
 
 function dispatch(action){
